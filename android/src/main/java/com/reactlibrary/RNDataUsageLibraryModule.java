@@ -24,6 +24,6 @@ public class RNDataUsageLibraryModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "RNDataUsageLibrary";
+    return "RNDataUsageLibraryModule";
   }
 }
