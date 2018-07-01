@@ -16,12 +16,10 @@ public class RNDataUsageLibraryModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void getTotalDataUsage(final Promise promise) {
-    try {
-      promise.resolve(((float) Math.round((android.net.TrafficStats.getTotalRxBytes() / (1024 * 1024)) * 10) / 10));
-    } catch (Exception ex) {
-      promise.reject("ERR_UNEXPECTED_EXCEPTION", ex);
-    }
+  public float getTotalDataUsage() {
+
+    return ((float) Math.round((android.net.TrafficStats.getTotalRxBytes() / (1024 * 1024)) * 10) / 10);
+
   }
 
   @Override
