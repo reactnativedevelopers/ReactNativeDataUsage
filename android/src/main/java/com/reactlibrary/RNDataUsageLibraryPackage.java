@@ -13,9 +13,8 @@ import com.facebook.react.bridge.JavaScriptModule;
 public class RNDataUsageLibraryPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) { 
-      List<NativeModule> modules = new ArrayList<>();
-      modules.add(new RNDataUsageLibraryModule(reactContext));
-      return modules;
+        return Arrays.<NativeModule>asList(new RNCheckDataUsageModule(reactContext));
+
     }
 
     // Deprecated from RN 0.47
