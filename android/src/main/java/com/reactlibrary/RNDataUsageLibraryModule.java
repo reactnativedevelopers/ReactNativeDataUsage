@@ -16,9 +16,9 @@ public class RNDataUsageLibraryModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public float getTotalDataUsage() {
+  public String getTotalDataUsage() {
 
-    return ((float) Math.round((android.net.TrafficStats.getTotalRxBytes() / (1024 * 1024)) * 10) / 10);
+    return ""+ ((float) Math.round((android.net.TrafficStats.getMobileRxBytes() / (1024 * 1024)) * 10) / 10) + " Total Bytes received " + ((float) Math.round((android.net.TrafficStats.getTotalRxBytes() / (1024 * 1024)) * 10) / 10) ;
 
   }
 
